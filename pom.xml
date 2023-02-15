@@ -7,13 +7,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>maven-version-plugin</module>
-		<module>image-text-plugin</module>		
-		<module>screenshot-html-plugin</module>
-		<module>db-meta-plugin</module>
-		<module>parser-generator-plugin</module>
-		<module>jira-plugin</module>
-		<module>windows-launcher-modifier-plugin</module>
+		<module>image-text-plugin</module>
 	</modules>
 
 	<build>
@@ -28,5 +22,4 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
 </project>

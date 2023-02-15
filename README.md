@@ -1,3 +1,3 @@
-# Maven Plugins
+# Maven Image Text Plugin
 
-Helper maven plugins to build the Axon Ivy Platform 
+This plugin is used to change text on images at build time.
