@@ -6,22 +6,17 @@ import java.io.File;
 import java.nio.file.Files;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.maven.plugin.testing.MojoRule;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import ch.ivyteam.ivy.maven.ImageTextMojo.Align;
 import ch.ivyteam.ivy.maven.ImageTextMojo.Style;
 
-public class TestImageTextMojo {
-
-  @Rule
-  public MojoRule rule = new MojoRule();
+class TestImageTextMojo {
 
   @Test
-  public void drawOnImage() throws Exception {
+  void drawOnImage() throws Exception {
     File project = new File("src/test/resources");
-    ImageTextMojo mojo = (ImageTextMojo) rule.lookupConfiguredMojo(project, "write-on-image");
+    var mojo = new ImageTextMojo();
     mojo.sourceImage = new File(project, "splash_empty.bmp");
     mojo.text = "hi maven!";
     mojo.x = 300;
@@ -41,7 +36,7 @@ public class TestImageTextMojo {
             .as("generated file must not be empty.")
             .isGreaterThan(1);
     // uncomment me for visual feedback!
-    // showVisualFeedback(mojo.targetImage, 10, TimeUnit.SECONDS);
+    //showVisualFeedback(mojo.targetImage, 10, TimeUnit.SECONDS);
   }
 
   @SuppressWarnings("all")
