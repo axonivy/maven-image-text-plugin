@@ -14,14 +14,11 @@ pipeline {
   }
 
   stages {
-    stage('build and deploy') {
+    stage('build') {
       steps {
         script {
-          if (env.BRANCH_NAME == 'master') {
-            maven cmd: 'deploy'
-          } else {
-            maven cmd: 'verify'
-          }
+          def phase = env.BRANCH_NAME == 'master' ? 'deploy' : 'verify'
+          maven cmd: phase
         }
         recordIssues tools: [eclipse()], unstableTotalAll: 1
         recordIssues tools: [mavenConsole()]
