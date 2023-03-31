@@ -7,17 +7,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>maven-version-plugin</module>
 		<module>image-text-plugin</module>
-		<module>image-dpi-plugin</module>
-		<module>screenshot-html-plugin</module>
-		<module>db-meta-plugin</module>
-		<module>merge-files-plugin</module>
-		<module>osgi-bundle-asciidoc-plugin</module>
-		<module>parser-generator-plugin</module>
-		<module>thirdparty-dependency-readme-plugin</module>
-		<module>changelog-generator-plugin</module>
-		<module>windows-launcher-modifier-plugin</module>
 	</modules>
 
 	<build>

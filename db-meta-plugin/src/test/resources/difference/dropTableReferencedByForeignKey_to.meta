@@ -1,4 +1,0 @@
-CREATE TABLE ReferenceTable
-(
-  ReferenceTableId BIGINT NOT NULL
-); 
